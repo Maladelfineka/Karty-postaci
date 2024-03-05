@@ -1,0 +1,27 @@
+.karta{
+    background-color: rgb(31, 45, 54);
+    border-radius: 100px;
+    border: 5px solid rgb(8, 12, 17);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-around;
+}
+.karta-image{
+    display: flex;
+}
+
+.karta-name{
+    color: white;
+    
+}
+.karta-status{
+    color: gray;
+}
+
+.karta-origin{
+    color: yellow;
+}
+
+.karta-location{
+    color: rgba(169, 169, 169, 0.453);
+}
