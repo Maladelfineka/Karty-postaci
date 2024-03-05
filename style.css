@@ -25,3 +25,7 @@
 .karta-location{
     color: rgba(169, 169, 169, 0.453);
 }
+
+body {
+    background-color: black;
+}
