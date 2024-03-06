@@ -1,48 +1,3 @@
-let characters = [{
-   "id": 1,
-   "name": "Rick Sanchez",
-   "status": "Alive",
-   "species": "Human",
-   "type": "",
-   "gender": "Male",
-   "origin": {
-       "name": "Earth (C-137)",
-       "url": "https://rickandmortyapi.com/api/location/1"
-   },
-   "location": {
-       "name": "Citadel of Ricks",
-       "url": "https://rickandmortyapi.com/api/location/3"
-   },
-   "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-   "episode": [
-       "https://rickandmortyapi.com/api/episode/1"
-   ],
-   "url": "https://rickandmortyapi.com/api/character/1",
-   "created": "2017-11-04T18:48:46.250Z"
-},
-{
-   "id": 2,
-   "name": "Morty Smith",
-   "status": "Alive",
-   "species": "Human",
-   "type": "",
-   "gender": "Male",
-   "origin": {
-       "name": "unknown",
-       "url": ""
-   },
-   "location": {
-       "name": "Citadel of Ricks",
-       "url": "https://rickandmortyapi.com/api/location/3"
-   },
-   "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
-   "episode": [
-       "https://rickandmortyapi.com/api/episode/1"
-   ],
-   "url": "https://rickandmortyapi.com/api/character/2",
-   "created": "2017-11-04T18:50:21.651Z"
-}];
-
 
 function karty(charactery){
 
@@ -64,19 +19,27 @@ function karty(charactery){
    }
    root.innerHTML=temp
 }
+var next = '';
+var nextButton = document.querySelector(".next-js");
 
-console.log(characters)
-console.log("test");
 let root = document.querySelector('.root');
-console.log(root);
+nextButton.onclick = function(){
+   console.log("dziala")
+   fetch(next)
+      .then(response => response.json())
+      .then(result => {
+         next = result.info.next;
+         karty(result.results)
+         })
+}
 
-let API_KEY = 'live_wdbxClxk38p5aP0l2Dv1UUwkOXPTu1xDhfu3OaVNzvjgwHZYC2zyW2lsR2ETmWtN';
-karty(characters)
+
 
  
  fetch("https://rickandmortyapi.com/api/character")
  .then(response => response.json())
  .then(result => {
+
     karty(result.results)
 
  });
