@@ -18,7 +18,7 @@ function karty(charactery){
         `;
    }
    root.innerHTML=temp
-}
+};
 var next = '';
 var nextButton = document.querySelector(".next-js");
 
@@ -29,7 +29,7 @@ nextButton.onclick = function(){
       .then(response => response.json())
       .then(result => {
          next = result.info.next;
-         karty(result.results)
+         karty(result.results);
          })
 }
 
@@ -39,7 +39,7 @@ nextButton.onclick = function(){
  fetch("https://rickandmortyapi.com/api/character")
  .then(response => response.json())
  .then(result => {
-
+      next = result.info.next;
     karty(result.results)
 
  });
