@@ -29,3 +29,37 @@
 body {
     background-color: black;
 }
+
+.prev-js {
+    width: 184px;
+    background-color: #1c2842;
+    color: #EF4444;
+    height: 23px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+.next-js{
+    width: 184px;
+    background-color: #1c2842;
+    color: #cdef44;
+    height: 23px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.prev-js1 {
+    width: 184px;
+    background-color: #1c2842;
+    color: #EF4444;
+    height: 23px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+.next-js1 {
+    width: 184px;
+    background-color: #1c2842;
+    color: #cdef44;
+    height: 23px;
+    font-size: 14px;
+    border-radius: 20px;
+}
