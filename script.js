@@ -12,7 +12,7 @@ function karty(charactery){
             <p class="karta-location">${i.location.name}</p>
          </div>
          <div class="karta-image">
-            <img src="${i.image}" alt="">
+            <img class="images" src="${i.image}" alt="">
          </div>
         </div>
         `;

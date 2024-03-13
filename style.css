@@ -5,9 +5,19 @@
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-around;
+    width: 800px;
+}
+
+.root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 .karta-image{
     display: flex;
+    
 }
 
 .karta-name{
@@ -30,36 +40,42 @@ body {
     background-color: black;
 }
 
-.prev-js {
+
+
+.link{
     width: 184px;
-    background-color: #1c2842;
-    color: #EF4444;
     height: 23px;
     font-size: 14px;
     border-radius: 20px;
-}
-.next-js{
-    width: 184px;
-    background-color: #1c2842;
-    color: #cdef44;
-    height: 23px;
-    font-size: 14px;
-    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 5px;
+    appearance: auto;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.prev-js1 {
-    width: 184px;
-    background-color: #1c2842;
-    color: #EF4444;
-    height: 23px;
-    font-size: 14px;
-    border-radius: 20px;
-}
-.next-js1 {
-    width: 184px;
+
+.next-color{
     background-color: #1c2842;
     color: #cdef44;
-    height: 23px;
-    font-size: 14px;
-    border-radius: 20px;
+
+}
+.prev-color{
+    background-color: #1c2842;
+    color: #EF4444;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.images{
+    border-radius: 20px 0;
 }
