@@ -30,17 +30,20 @@ function nextButtonFunction(){
          prev = result.info.prev;
          karty(result.results);
          })
+
 };
 
 function prevButtonFunction(){
-   fetch(prev)
+   if (prev != null){
+      fetch(prev)
       .then(response => response.json())
       .then(result => {
          
          prev = result.info.prev;
          next = result.info.next;
          karty(result.results);
-   })
+      })
+   }
 }
 var next = '';
 var nextButton = document.querySelector(".next-js");
