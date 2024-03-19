@@ -21,8 +21,6 @@ function karty(charactery){
 };
 
 function nextButtonFunction(){
-   prevButton1.disabled= false;
-   prevButton.disabled= false;
    fetch(next)
       .then(response => response.json())
       .then(result => {
@@ -55,8 +53,6 @@ var prevButton = document.querySelector(".prev-js");
 
 var prevButton1 = document.querySelector(".prev-js1");
 
-prevButton.disabled = true;
-prevButton1.disabled = true;
 let root = document.querySelector('.root');
 
 
