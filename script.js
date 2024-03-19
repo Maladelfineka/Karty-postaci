@@ -19,6 +19,29 @@ function karty(charactery){
    }
    root.innerHTML=temp
 };
+
+function nextButtonFunction(){
+   prevButton1.disabled= false;
+   prevButton.disabled= false;
+   fetch(next)
+      .then(response => response.json())
+      .then(result => {
+         next = result.info.next;
+         prev = result.info.prev;
+         karty(result.results);
+         })
+};
+
+function prevButtonFunction(){
+   fetch(prev)
+      .then(response => response.json())
+      .then(result => {
+         
+         prev = result.info.prev;
+         next = result.info.next;
+         karty(result.results);
+   })
+}
 var next = '';
 var nextButton = document.querySelector(".next-js");
 
@@ -33,66 +56,28 @@ prevButton.disabled = true;
 prevButton1.disabled = true;
 let root = document.querySelector('.root');
 
+
+
+
 nextButton.onclick = function(){
-   console.log("dziala")
-   prevButton1.disabled= false;
-   prevButton.disabled= false;
-   fetch(next)
-      .then(response => response.json())
-      .then(result => {
-         console.log(result)
-         next = result.info.next;
-         prev = result.info.prev;
-         karty(result.results);
-         })
-}
+   nextButtonFunction();
+};
 
 nextButton1.onclick = function(){
-   console.log("dziala")
-   prevButton1.disabled= false;
-   prevButton.disabled= false;
-   fetch(next)
-      .then(response => response.json())
-      .then(result => {
-         console.log(result)
-         next = result.info.next;
-         prev = result.info.prev;
-         karty(result.results);
-         })
-}
+   nextButtonFunction();
+};
 
 prevButton.onclick = function(){
-   
-   console.log("YeS!")
-   fetch(prev)
-      .then(response => response.json())
-      .then(result => {
-         
-         prev = result.info.prev;
-         
-         next = result.info.next;
-         karty(result.results);
-   })
-}
+   prevButtonFunction();
+};
 prevButton1.onclick = function(){
-   
-   console.log("YeS!")
-   fetch(prev)
-      .then(response => response.json())
-      .then(result => {
-         
-         prev = result.info.prev;
-         
-         next = result.info.next;
-         karty(result.results);
-   })
-}
+   prevButtonFunction();
+};
 
  
  fetch("https://rickandmortyapi.com/api/character")
  .then(response => response.json())
  .then(result => {
-      console.log(result)
       next = result.info.next;
       prev = result.info.prev
     karty(result.results)
